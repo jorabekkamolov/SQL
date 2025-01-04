@@ -1,0 +1,6 @@
+select generated_date
+from v_genderated_dates
+except
+select visit_date as generated_date
+from person_visits
+order by generated_date
